@@ -1,0 +1,14 @@
+{
+  "name": "blkChain",
+  "version": "1.0.0",
+  "description": "A lightweight blockchain app in Nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "William M.",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.2"
+  }
+}
