@@ -9,9 +9,10 @@
   "author": "William M.",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "crypto": "^1.0.1",
+    "express": "^4.16.4",
+    "ws": "^6.1.2"
   },
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
