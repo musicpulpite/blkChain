@@ -6,8 +6,8 @@ A simple blockchain API built with Node.js and WebSockets
 2. [Blockchain Class](#blockchain)
 3. [WebSocket Connections](#websocket) 
 
-<a name="api"/>
 ## API Endpoints 
+<a name="api"/>
 The API responds to the following HTTP requests:  
 1. POST `/chain`: Add a new block to the current block chain with the data given in the HTTP body
 2. GET `/chain`: Returns the timestamps and data for each block in the current chain
@@ -16,8 +16,9 @@ The API responds to the following HTTP requests:
 5. GET `/peer`: Returns the url and readyState for every peer node currently connected
 
 
+
+## BlockChain Class 
 <a name="blockchain"/>
-## BlockChain Class
 The _BlockChain_ class manages interaction with a ledger of shared data - stored as an array of 
 `Block`s such that each `Block` contains a piece of data. Along with the stored data each block contains the following information:  
 
@@ -47,5 +48,5 @@ while(true) {
 }
 ````
 
-<a name="websocket"/>
 ## WebSocket Connections
+<a name="websocket"/>
