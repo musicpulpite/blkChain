@@ -4,10 +4,10 @@ A simple blockchain API built with Node.js and WebSockets
 ## Sections
 1. [API Endpoints](#api)
 2. [Blockchain Class](#blockchain)
-3. [WebSocket Connections](#websocket) .  
+3. [WebSocket Connections](#websocket) 
 
 <a name="api"/>
-## 1. API Endpoints 
+## API Endpoints 
 The API responds to the following HTTP requests:  
 1. POST `/chain`: Add a new block to the current block chain with the data given in the HTTP body
 2. GET `/chain`: Returns the timestamps and data for each block in the current chain
@@ -17,7 +17,7 @@ The API responds to the following HTTP requests:
 
 
 <a name="blockchain"/>
-## 2. BlockChain Class
+## BlockChain Class
 The _BlockChain_ class manages interaction with a ledger of shared data - stored as an array of 
 `Block`s such that each `Block` contains a piece of data. Along with the stored data each block contains the following information:  
 
@@ -48,4 +48,4 @@ while(true) {
 ````
 
 <a name="websocket"/>
-## 3. WebSocket Connections
+## WebSocket Connections
