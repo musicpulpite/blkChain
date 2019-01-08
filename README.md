@@ -9,6 +9,7 @@ A simple blockchain API built with Node.js and WebSockets
 ## API Endpoints 
 <a name="api"/>
 The API responds to the following HTTP requests:  
+
 1. POST `/chain`: Add a new block to the current block chain with the data given in the HTTP body
 2. GET `/chain`: Returns the timestamps and data for each block in the current chain
 3. GET `/chain/:idx`: Returns the timestamp and data for the block at the specified index
