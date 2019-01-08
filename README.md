@@ -20,7 +20,7 @@ The API responds to the following HTTP requests:
 
 ## BlockChain Class 
 <a name="blockchain"/>
-The _BlockChain_ class manages interaction with a ledger of shared data - stored as an array of 
+The `BlockChain` class manages interaction with a ledger of shared data - stored as an array of 
 `Block`s such that each `Block` contains a piece of data. Along with the stored data each block contains the following information:  
 
 ````javascript
@@ -51,3 +51,27 @@ while(true) {
 
 ## WebSocket Connections
 <a name="websocket"/>
+
+Upon initial connection with another node in the blockchain network the two nodes broadcast the `RECTIFY_CHAIN_DATA` message to each other along with the entirety of their respective chains. The `rectifyChainData` method on the `BlockChain` class compares two chains until it finds the first point of divergence between the chains and then rebuilds the rest of both chains using the combined data remaining from both chains. This is done in a completely deterministic way such that both nodes are left with identical chains (checked for validity at every block addition).  
+
+````javascript
+let i = 0;
+
+while(i < this.chain.length || i < otherChain.length) {
+  if (
+    this.chain[i] === undefined ||
+    otherChain[i] === undefined ||
+    this.chain[i].hash !== otherChain[i].hash) {
+
+    console.log("Chains mismatched! Consolidating");
+
+    ...
+
+    break;
+  }
+  i++;
+}
+...
+````
+
+The remaining blocks are ordered by timestamp and then the data from each block is reinserted on both chains.
