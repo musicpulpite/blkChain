@@ -2,9 +2,9 @@
 A simple blockchain API built with Node.js and WebSockets
 
 ## Sections
-1. [API Endpoints] (#api)
-2. [Blockchain Class] (#blockchain)
-3. [WebSocket Connections] (#websocket)
+1. [API Endpoints](#api)
+2. [Blockchain Class](#blockchain)
+3. [WebSocket Connections](#websocket) 
 
 <a name="api"/>
 ## 1. API Endpoints 
