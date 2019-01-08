@@ -4,10 +4,16 @@ A simple blockchain API built with Node.js and WebSockets
 ## Sections
 1. [API Endpoints](#api)
 2. [Blockchain Class](#blockchain)
-3. [WebSocket Connections](#websocket) 
+3. [WebSocket Connections](#websocket) .  
 
 <a name="api"/>
 ## 1. API Endpoints 
+The API responds to the following HTTP requests:  
+1. POST `/chain`: Add a new block to the current block chain with the data given in the HTTP body
+2. GET `/chain`: Returns the timestamps and data for each block in the current chain
+3. GET `/chain/:idx`: Returns the timestamp and data for the block at the specified index
+4. POST `/peer`: Add peer node at the url specified in the HTTP body
+5. GET `/peer`: Returns the url and readyState for every peer node currently connected
 
 
 <a name="blockchain"/>
