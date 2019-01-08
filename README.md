@@ -1,6 +1,17 @@
 # blkChain
 A simple blockchain API built with Node.js and WebSockets
 
+## Sections
+1. [API Endpoints] (#api)
+2. [Blockchain Class] (#blockchain)
+3. [WebSocket Connections] (#websocket)
+
+<a name="api"/>
+## 1. API Endpoints 
+
+
+<a name="blockchain"/>
+## 2. BlockChain Class
 The _BlockChain_ class manages interaction with a ledger of shared data - stored as an array of 
 `Block`s such that each `Block` contains a piece of data. Along with the stored data each block contains the following information:  
 
@@ -29,3 +40,6 @@ while(true) {
   else nonce++;
 }
 ````
+
+<a name="websocket"/>
+## 3. WebSocket Connections
