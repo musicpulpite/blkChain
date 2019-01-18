@@ -8,8 +8,9 @@ A simple blockchain API built with Node.js and WebSockets
 
 ## API Endpoints
 <a name="api"/>
-By default, the application server is listening on `port 3000` and the websocket server
-is listening on `port 3001`.  
+By default, the application server is listening on and the websocket server
+is listening on.  
+
 The API responds to the following HTTP requests:  
 
 1. POST `/chain`: Add a new block to the current block chain with the data given in the HTTP body
