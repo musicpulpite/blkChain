@@ -8,8 +8,9 @@ A simple blockchain API built with Node.js and WebSockets
 
 ## API Endpoints
 <a name="api"/>
-By default, the application server is listening on and the websocket server
-is listening on.  
+
+By default, the application server is listening on`port 3000`and the websocket server
+is listening on`port 3001`.
 
 The API responds to the following HTTP requests:  
 
@@ -23,6 +24,7 @@ The API responds to the following HTTP requests:
 
 ## BlockChain Class
 <a name="blockchain"/>
+
 The `BlockChain` class manages interaction with a ledger of shared data - stored as an array of
 `Block`s such that each `Block` contains a piece of data. Along with the stored data each block contains the following information:  
 
