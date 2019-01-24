@@ -1,5 +1,8 @@
 # blkChain
-A simple blockchain API built with Node.js and WebSockets
+A simple blockchain API built with Node.js and WebSockets.  
+
+As this was very much a learning exercise for me, the design of this app was heavily based upon this blog post. However, I restructured many parts of it, added functionality and developed my own blockchain merging scheme.  
+[NodeJS blockchain implementation: BrewChain: Chain+WebSockets+HTTP Server](http://www.darrenbeck.co.uk/blockchain/nodejs/nodejscrypto/)
 
 ## Sections
 1. [API Endpoints](#api)
@@ -57,7 +60,13 @@ while(true) {
 ## WebSocket Connections
 <a name="websocket"/>
 
-Upon initial connection with another node in the blockchain network the two nodes broadcast the `RECTIFY_CHAIN_DATA` message to each other along with the entirety of their respective chains. The `rectifyChainData` method on the `BlockChain` class compares two chains until it finds the first point of divergence between the chains and then rebuilds the rest of both chains using the combined data remaining from both chains. This is done in a completely deterministic way such that both nodes are left with identical chains (checked for validity at every block addition).  
+Upon initial connection with another node in the blockchain network the two nodes broadcast the `RECTIFY_CHAIN_DATA` message to each other along with the entirety of their respective chains.
+````javascript
+connection.send(
+  JSON.stringify({event: "RECTIFY_CHAINS", content: this.blkChain.chain})
+);
+````
+The `rectifyChainData` method on the `BlockChain` class compares two chains until it finds the first point of divergence between the chains and then rebuilds the rest of both chains using the combined data remaining from both chains. This is done in a completely deterministic way such that both nodes are left with identical chains (checked for validity at every block addition).  
 
 ````javascript
 let i = 0;
